@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BklyOnboardingAPI</name>
+    </assembly>
+    <members>
+        <member name="T:BklyOnboardingAPI.Controllers.EmailController">
+            <summary>
+             Send emails to consumers
+            </summary>
+        </member>
+        <member name="M:BklyOnboardingAPI.Controllers.EmailController.SendOnboardingMail(BklyOnboardingAPI.Application.Contracts.DTOs.SendOnboardingEmailDto)">
+            <summary>
+             Send a formatted email to web and mobile users during onboarding
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
