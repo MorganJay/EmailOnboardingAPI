@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Mapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BklyOnboardingAPI.Domain.Shared\BklyOnboardingAPI.Domain.Shared.csproj" />
+    <ProjectReference Include="..\BklyOnboardingAPI.Domain\BklyOnboardingAPI.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
 ﻿using BklyOnboardingAPI.Domain.Entities;
-using BklyOnboardingAPI.Domain.Shared.Constants;
 using Microsoft.EntityFrameworkCore;
 
 #nullable disable
@@ -23,7 +22,7 @@ namespace BklyOnboardingAPI.EntityFrameworkCore.AppDbContext
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(Constants.DB_CONNECTION);
+                optionsBuilder.UseSqlServer("Name=Bankly");
             }
         }
 

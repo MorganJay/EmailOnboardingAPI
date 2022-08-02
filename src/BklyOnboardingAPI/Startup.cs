@@ -1,7 +1,10 @@
+using BklyOnboardingAPI.Domain.Shared.Constants;
 using BklyOnboardingAPI.Domain.Shared.Converters;
+using BklyOnboardingAPI.EntityFrameworkCore.AppDbContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,7 +29,7 @@ namespace BklyOnboardingAPI
         {
             services.AddHttpContextAccessor();
 
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Constants.DB_CONNECTION));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
             services.AddControllers().AddJsonOptions(options =>
             {
@@ -53,6 +56,8 @@ namespace BklyOnboardingAPI
             services.AddCors(options => options.AddPolicy("AllowEverthing", builder => builder.AllowAnyOrigin()
                                                                                               .AllowAnyMethod()
                                                                                               .AllowAnyHeader()));
+
+            services.ConfigureRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

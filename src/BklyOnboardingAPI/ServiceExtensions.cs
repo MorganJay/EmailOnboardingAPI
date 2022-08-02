@@ -1,7 +1,11 @@
-﻿using BklyOnboardingAPI.Domain.Shared.Responses;
+﻿using BklyOnboardingAPI.Application.Contracts.Interfaces;
+using BklyOnboardingAPI.Domain.Shared.Responses;
+using BklyOnboardingAPI.EntityFrameworkCore.AppDbContext;
+using BklyOnboardingAPI.EntityFrameworkCore.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using System.Collections.Generic;
 using System.Net;
@@ -34,6 +38,13 @@ namespace BklyOnboardingAPI
                     }
                 });
             });
+        }
+
+        public static void ConfigureRepositories(this IServiceCollection services)
+        {
+            services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+
+            services.AddScoped<IEmailTemplateRepository, EmailTemplateRepository>();
         }
     }
 }
