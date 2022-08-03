@@ -25,7 +25,7 @@ namespace BklyOnboardingAPI.EntityFrameworkCore.Repositories
 
             var password = StringHelper.CreateRandomPassword(10);
 
-            template.Template = template.Template.Replace("{FirstName}", emailDto.FullName.Split(" ")[0]).Replace("{FullName}", emailDto.FullName).Replace("{PhoneNumber}", emailDto.PhoneNumber).Replace("{UserName}", emailDto.UserName).Replace("{Password}", password).Replace("{Passcode}", password);
+            template.Template = template.Template.Replace("{FirstName}", emailDto.FullName.Split(" ")[0]).Replace("{FullName}", emailDto.FullName).Replace("{PhoneNumber}", emailDto.PhoneNumber).Replace("{Username}", emailDto.UserName).Replace("{Password}", password).Replace("{Passcode}", password);
 
             var recipientName = emailDto.ViaMobile ? emailDto.FullName : emailDto.UserName;
             var emailSent = await _emailService.Send(template, emailDto.Email, recipientName);
