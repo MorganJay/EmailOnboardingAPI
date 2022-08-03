@@ -1,4 +1,5 @@
 ﻿using BklyOnboardingAPI.Application.Contracts.DTOs;
+using BklyOnboardingAPI.Application.Contracts.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -10,9 +11,10 @@ namespace BklyOnboardingAPI.Controllers
     /// </summary>
     public class EmailController : BaseController
     {
-        public EmailController(IHttpContextAccessor contextAccessor) : base(contextAccessor)
+        private readonly IOnboardingRepository _onboardingRepository;
+        public EmailController(IHttpContextAccessor contextAccessor, IOnboardingRepository onboardingRepository) : base(contextAccessor)
         {
-
+            _onboardingRepository = onboardingRepository;
         }
 
         /// <summary>
@@ -22,7 +24,11 @@ namespace BklyOnboardingAPI.Controllers
         [HttpPost("onboarding")]
         public async Task<IActionResult> SendOnboardingMail(SendOnboardingEmailDto emailDto)
         {
-            return ApiOk(emailDto);
+            if(!ModelState.IsValid) return ApiBad(ModelState);
+
+            var success = await _onboardingRepository.SendMail(emailDto);
+
+            return success ? ApiOk(success, "Email sent successfully") : ApiBad(message: "Sorry, we couldn't send that email right now");
         }
     }
 }

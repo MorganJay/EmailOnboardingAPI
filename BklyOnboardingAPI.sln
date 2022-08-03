@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BklyOnboardingAPI", "src\Bk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BklyOnboardingAPI.Application.Contracts", "src\BklyOnboardingAPI.Application.Contracts\BklyOnboardingAPI.Application.Contracts.csproj", "{C212611F-D907-4A54-B118-FEBF90672435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BklyOnboardingAPI.Domain", "src\BklyOnboardingAPI.Domain\BklyOnboardingAPI.Domain.csproj", "{F04BCF1B-3B87-4354-B173-8D2993E5C36A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BklyOnboardingAPI.Domain", "src\BklyOnboardingAPI.Domain\BklyOnboardingAPI.Domain.csproj", "{F04BCF1B-3B87-4354-B173-8D2993E5C36A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BklyOnboardingAPI.EntityFrameworkCore", "src\BklyOnboardingAPI.EntityFrameworkCore\BklyOnboardingAPI.EntityFrameworkCore.csproj", "{9D71A243-58FC-45C6-8792-8A653C050C80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BklyOnboardingAPI.EntityFrameworkCore", "src\BklyOnboardingAPI.EntityFrameworkCore\BklyOnboardingAPI.EntityFrameworkCore.csproj", "{9D71A243-58FC-45C6-8792-8A653C050C80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BklyOnboardingAPI.Application", "src\BklyOnboardingAPI.Application\BklyOnboardingAPI.Application.csproj", "{CAC29D1D-2EB9-4176-BFF2-2420A8647B15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{9D71A243-58FC-45C6-8792-8A653C050C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D71A243-58FC-45C6-8792-8A653C050C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D71A243-58FC-45C6-8792-8A653C050C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC29D1D-2EB9-4176-BFF2-2420A8647B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC29D1D-2EB9-4176-BFF2-2420A8647B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC29D1D-2EB9-4176-BFF2-2420A8647B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC29D1D-2EB9-4176-BFF2-2420A8647B15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{C212611F-D907-4A54-B118-FEBF90672435} = {7FE48188-FA1A-4C80-9487-38942A837986}
 		{F04BCF1B-3B87-4354-B173-8D2993E5C36A} = {7FE48188-FA1A-4C80-9487-38942A837986}
 		{9D71A243-58FC-45C6-8792-8A653C050C80} = {7FE48188-FA1A-4C80-9487-38942A837986}
+		{CAC29D1D-2EB9-4176-BFF2-2420A8647B15} = {7FE48188-FA1A-4C80-9487-38942A837986}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {048A16C5-7264-433A-9F89-E60ECE8A932E}

@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BklyOnboardingAPI.Application.Contracts\BklyOnboardingAPI.Application.Contracts.csproj" />
+    <ProjectReference Include="..\BklyOnboardingAPI.Application\BklyOnboardingAPI.Application.csproj" />
     <ProjectReference Include="..\BklyOnboardingAPI.Domain.Shared\BklyOnboardingAPI.Domain.Shared.csproj" />
     <ProjectReference Include="..\BklyOnboardingAPI.EntityFrameworkCore\BklyOnboardingAPI.EntityFrameworkCore.csproj" />
   </ItemGroup>

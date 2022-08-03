@@ -1,4 +1,6 @@
-﻿using BklyOnboardingAPI.Application.Contracts.Interfaces;
+﻿using BklyOnboardingAPI.Application.ApiInterfaces;
+using BklyOnboardingAPI.Application.ApiServices;
+using BklyOnboardingAPI.Application.Contracts.Interfaces;
 using BklyOnboardingAPI.Domain.Shared.Responses;
 using BklyOnboardingAPI.EntityFrameworkCore.AppDbContext;
 using BklyOnboardingAPI.EntityFrameworkCore.Repositories;
@@ -45,6 +47,10 @@ namespace BklyOnboardingAPI
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
             services.AddScoped<IEmailTemplateRepository, EmailTemplateRepository>();
+
+            services.AddScoped<IOnboardingRepository, OnboardingRepository>();
+
+            services.AddScoped<IEmailService, EmailService>();
         }
     }
 }

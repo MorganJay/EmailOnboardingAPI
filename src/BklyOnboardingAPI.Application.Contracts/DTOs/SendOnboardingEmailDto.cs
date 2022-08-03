@@ -18,6 +18,6 @@ namespace BklyOnboardingAPI.Application.Contracts.DTOs
         [RegularExpression(@"0([7][0]|[89][01])\d{8}$", ErrorMessage = "Invalid Phone Number Format")]
         public string PhoneNumber { get; set; }
 
-        public string UserName { get; set; } 
+        public string UserName { get; set; } = string.Empty;
     }
 }

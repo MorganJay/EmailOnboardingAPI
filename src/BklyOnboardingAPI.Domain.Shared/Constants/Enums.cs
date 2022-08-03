@@ -4,8 +4,8 @@
     {
         public enum EmailTemplate
         {
-            MOBILE_ONBOARDING = 1,
-            WEB_ONBOARDING
+            WEB_ONBOARDING = 1,
+            MOBILE_ONBOARDING
         }
     }
 }
